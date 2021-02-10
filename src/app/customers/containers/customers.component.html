@@ -3,18 +3,46 @@
   <p class="grey-text pt-3">Manage your songs list</p>
 </div>
 
-<div class="container-fluid pt-5 pb-5">
-  <div class="pt-3 pb-5">
-    <button mdbBtn color="primary" (click)="onAddCustomer()">Add new song</button>
-
-    <div *ngIf="customers" class="mt-4 white">
-      <app-customers-list [customers]="customers" (customerEdited)="onCustomerEdit($event)" (customerDeleted)="onCustomerDelete($event)"></app-customers-list>
+<div class="row">
+  <div class="media">
+    <img class="d-flex align-self-center mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 font-weight-bold">Center-aligned media</h5>
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
+        odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+        Donec lacinia congue felis in faucibus.</p>
+      <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus
+        et magnis dis parturient montes, nascetur ridiculus mus.</p>
     </div>
+  </div>
+</div>
 
-    <div *ngIf="isLoading$ | async" class="d-flex justify-content-center align-items-center" style="margin-top: 200px">
-      <div class="spinner-grow text-primary" role="status" style="width: 4rem; height: 4rem;">
-        <span class="sr-only">Loading...</span>
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="container-fluid pt-5 pb-5">
+      <div class="pt-3 pb-5">
+        <button mdbBtn color="primary" (click)="onAddCustomer()">Play</button>
+
+        <div *ngIf="customers" class="mt-4 white">
+          <app-customers-list [customers]="customers" (customerEdited)="onCustomerEdit($event)" (customerDeleted)="onCustomerDelete($event)"></app-customers-list>
+        </div>
+
+        <div *ngIf="isLoading$ | async" class="d-flex justify-content-center align-items-center" style="margin-top: 200px">
+          <div class="spinner-grow text-primary" role="status" style="width: 4rem; height: 4rem;">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
+    </div>
+  
+  </div>
+
+  <div class="col-md-6">
+    <div style="margin-top: 50px;">
+      <iframe id="videoPlayer" class="youTubePlayer" width="560" height="315" src="https://www.youtube.com/embed/hjgPCxO-ic0?enablejsapi=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen="" style="border-color: rgb(221, 44, 0);">
+      </iframe>
     </div>
   </div>
 </div>

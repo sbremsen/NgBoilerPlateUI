@@ -18,7 +18,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { SharedModule } from './shared/shared.module';
 import { AdminModule } from './admin/admin.module';
-import { ModalModule } from 'ng-uikit-pro-standard';
+import { MDBBootstrapModule  } from 'ng-uikit-pro-standard';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,9 +28,9 @@ import { ModalModule } from 'ng-uikit-pro-standard';
   ],
   imports: [
     BrowserModule,
-    AuthModule,
+    AuthModule, 
     SharedModule,
-    ModalModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
     AdminModule,
     AppRoutingModule,
     HttpClientModule,
@@ -40,7 +41,8 @@ import { ModalModule } from 'ng-uikit-pro-standard';
     CoreModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })

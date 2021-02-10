@@ -20,6 +20,7 @@ const routes: Routes = [
   ]},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'kanban', loadChildren: './kanban/kanban.module#KanbanModule', canActivate: [AuthGuard]},
   { path: '**', component: PageNotFoundComponent }
 ];
 

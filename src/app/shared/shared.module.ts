@@ -22,7 +22,7 @@ import { CustomersListComponent } from './components/customers-list/customers-li
     ProjectModalComponent,
     ProjectsListComponent,
     ProjectComponent,
-    CustomersListComponent
+    CustomersListComponent,
   ],
   imports: [
     CommonModule,

@@ -1,77 +1,62 @@
+<!--Home section -->
+<section id='home'>
 
-<div class="container py-5">
-  <div class="row">
-    <div class="col-md-6">
-      <mdb-card class="animated fadeIn mb-3" borderColor="border-warning">
-        <mdb-card-header>App section</mdb-card-header>
-        <mdb-card-body class="p-3">
-          <mdb-card-title>
-            <h5 class="mb-3">Projects</h5>
-          </mdb-card-title>
-          <mdb-card-text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi blanditiis, assumenda dolorem
-            possimus id qui ut eaque. Similique porro labore commodi impedit deserunt? Officiis nihil rem aut molestias
-            illum eos! Similique accusantium reprehenderit necessitatibus quo totam provident laudantium recusandae
-            sapiente, nemo ex illum nobis, officia, vero dolores! Distinctio similique pariatur, at sint nemo quidem
-            commodi vel rerum aliquid quibusdam? Perferendis.</mdb-card-text>
-          <a routerLink="/projects" mdbBtn color="orange">Go to section</a>
-        </mdb-card-body>
-      </mdb-card>
+  <!-- News jumbotron -->
+  <div class="jumbotron text-center hoverable p-4">
+  
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-md-4 offset-md-1 mx-3 my-3">
+  
+        <!-- Featured image -->
+        <div class="view overlay waves-light" mdbWavesEffect>
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Sample image for first version of blog listing">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-md-7 text-md-left ml-3 mt-3">
+  
+        <!-- Excerpt -->
+        <a href="#!" style="color: #6c757d!important;">
+          <h6 class="h6 pb-1"><i class="fas fa-project-diagram"></i> {{ title | titlecase}}</h6>
+        </a>
+  
+        <h4 class="h4 mb-4">{{ header }}</h4>
+  
+        <p class="font-weight-normal">{{ description }}</p>
+        <p class="font-weight-normal">by <a><strong>Scott Remsen</strong></a></p>
+  
+        <a routerLink="/projects" mdbBtn color="success" mdbWavesEffect>Read more</a>
+  
+      </div>
+      <!-- Grid column -->
+  
     </div>
-
-    <div class="col-md-6">
-      <mdb-card class="animated fadeIn mb-3" borderColor="border-warning">
-        <mdb-card-header>App section</mdb-card-header>
-        <mdb-card-body class="p-3">
-          <mdb-card-title>
-            <h5 class="mb-3">Tables</h5>
-          </mdb-card-title>
-          <mdb-card-text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi blanditiis, assumenda dolorem
-            possimus id qui ut eaque. Similique porro labore commodi impedit deserunt? Officiis nihil rem aut molestias
-            illum eos! Similique accusantium reprehenderit necessitatibus quo totam provident laudantium recusandae
-            sapiente, nemo ex illum nobis, officia, vero dolores! Distinctio similique pariatur, at sint nemo quidem
-            commodi vel rerum aliquid quibusdam? Perferendis.</mdb-card-text>
-          <a routerLink="/customers" mdbBtn color="orange">Go to section</a>
-        </mdb-card-body>
-      </mdb-card>
+    <!-- Grid row -->
+  
+    <div class="row" style="margin-top: 30px; margin-left:5px;">
+      <!--Grid column-->
+      <div class="col-md-12 mb-4">
+        <ul class="list-unstyled">
+          <!-- <app-home-tiles [loadAboutPage]="false"></app-home-tiles> -->
+        </ul>
+      </div>
+      <!--Grid column-->
+  
     </div>
   </div>
-  <div class="row">
+  <!-- News jumbotron -->
+  
+</section>
 
-    <div class="col-md-6">
-      <mdb-card class="animated fadeIn mb-3" borderColor="border-warning">
-        <mdb-card-header>App section</mdb-card-header>
-        <mdb-card-body class="p-3">
-          <mdb-card-title>
-            <h5 class="mb-3">Charts</h5>
-          </mdb-card-title>
-          <mdb-card-text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi blanditiis, assumenda dolorem
-            possimus id qui ut eaque. Similique porro labore commodi impedit deserunt? Officiis nihil rem aut molestias
-            illum eos! Similique accusantium reprehenderit necessitatibus quo totam provident laudantium recusandae
-            sapiente, nemo ex illum nobis, officia, vero dolores! Distinctio similique pariatur, at sint nemo quidem
-            commodi vel rerum aliquid quibusdam? Perferendis.</mdb-card-text>
-          <a routerLink="/charts" mdbBtn color="orange">Go to section</a>
-        </mdb-card-body>
-      </mdb-card>
-    </div>
 
-    <div class="col-md-6">
-      <mdb-card class="animated fadeIn mb-3" borderColor="border-warning">
-        <mdb-card-header>App section</mdb-card-header>
-        <mdb-card-body class="p-3">
-          <mdb-card-title>
-            <h5 class="mb-3">Profile</h5>
-          </mdb-card-title>
-          <mdb-card-text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi blanditiis, assumenda dolorem
-            possimus id qui ut eaque. Similique porro labore commodi impedit deserunt? Officiis nihil rem aut molestias
-            illum eos! Similique accusantium reprehenderit necessitatibus quo totam provident laudantium recusandae
-            sapiente, nemo ex illum nobis, officia, vero dolores! Distinctio similique pariatur, at sint nemo quidem
-            commodi vel rerum aliquid quibusdam? Perferendis.</mdb-card-text>
-          <a routerLink="/profile" mdbBtn color="orange">Go to section</a>
-        </mdb-card-body>
-      </mdb-card>
-    </div>
-
-  </div>
-</div>
 
 

@@ -11,6 +11,7 @@ import { ProjectsEffects } from './store/projects.effects';
 import { FormsModule } from '@angular/forms';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   imports: [
@@ -22,8 +23,10 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     ButtonsModule,
     InputsModule,
+    CoreModule,
     WavesModule,
     IconsModule,
+    CoreModule,
     CardsModule,
     StoreModule.forFeature('projects', fromProjects.projectsReducer),
     EffectsModule.forFeature([ProjectsEffects])

@@ -1,17 +1,252 @@
-<div class="white px-4 section-header">
-  <h3>Projects list</h3>
-  <p class="grey-text pt-3">Add, edit and delete your projects</p>
-</div>
+<!--Projects section -->
+<section id='projects'>
 
-<div class="container-fluid pb-5">
-  <div class="py-5">
-      <button mdbBtn color="primary" class="ml-3" (click)="openAddProjectModal()">Add new project</button>
-      <app-projects-list [projects]="projects$ | async" (projectDeleted)="onProjectDelete($event)" (projectEdited)="onProjectEdit($event)"></app-projects-list>
-
-    <div *ngIf="isLoading$ | async" class="d-flex justify-content-center align-items-center" style="margin-top: 200px">
-      <div class="spinner-grow text-primary" role="status" style="width: 4rem; height: 4rem;">
-        <span class="sr-only">Loading...</span>
+  <!-- News jumbotron -->
+  <div class="jumbotron text-center hoverable p-4">
+  
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-md-4 offset-md-1 mx-3 my-3">
+  
+        <!-- Featured image -->
+        <div class="view overlay waves-light" mdbWavesEffect>
+          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Sample image for first version of blog listing">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
       </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+     <div class="col-md-7 text-md-left ml-3 mt-3">
+  
+        <!-- Excerpt -->
+       
+        <p class="font-weight-normal">by <a><strong>Scott Remsen</strong></a></p>
+  
+        <section class="videos spad">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="section-title center-title">
+                          <h2>YOutube feed</h2>
+                          <h1>Latest videos</h1>
+                      </div>
+                      <div class="videos__large__item set-bg" data-setbg="img/videos/large-item.jpg" style="background-image: url(&quot;img/videos/large-item.jpg&quot;);">
+                          <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                          <div class="videos__large__item__text">
+                              <h4>Martin Garrix &amp; Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
+                              </h4>
+                              <ul>
+                                  <li>02:35:18</li>
+                                  <li>Dec 17, 2019</li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="videos__slider owl-carousel owl-loaded owl-drag">
+                              
+                              
+                              
+                              
+                              
+                          <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1462px, 0px, 0px); transition: all 1.2s ease 0s; width: 3803px;"><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-2.jpg" style="background-image: url(&quot;img/videos/videos-2.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=K4DyBUG242c?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Tiësto - Live Electric Daisy Carnival Las Vegas 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-3.jpg" style="background-image: url(&quot;img/videos/videos-3.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=3nQNiWdeH2Q?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Martin Garrix - Live @ Ultra Music Festival Miami 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-4.jpg" style="background-image: url(&quot;img/videos/videos-4.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=Srqs4CitU2U?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Armin van Buuren live at Tomorrowland 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-3.jpg" style="background-image: url(&quot;img/videos/videos-3.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=vBGiFtb8Rpw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Martin Garrix - Live @ Ultra Music Festival Miami 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-1.jpg" style="background-image: url(&quot;img/videos/videos-1.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Electric Love Festival 2019 - The Opening Ceremony</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item active" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-2.jpg" style="background-image: url(&quot;img/videos/videos-2.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=K4DyBUG242c?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Tiësto - Live Electric Daisy Carnival Las Vegas 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item active" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-3.jpg" style="background-image: url(&quot;img/videos/videos-3.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=3nQNiWdeH2Q?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Martin Garrix - Live @ Ultra Music Festival Miami 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item active" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-4.jpg" style="background-image: url(&quot;img/videos/videos-4.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=Srqs4CitU2U?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Armin van Buuren live at Tomorrowland 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item active" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-3.jpg" style="background-image: url(&quot;img/videos/videos-3.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=vBGiFtb8Rpw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Martin Garrix - Live @ Ultra Music Festival Miami 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-1.jpg" style="background-image: url(&quot;img/videos/videos-1.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Electric Love Festival 2019 - The Opening Ceremony</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-2.jpg" style="background-image: url(&quot;img/videos/videos-2.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=K4DyBUG242c?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Tiësto - Live Electric Daisy Carnival Las Vegas 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-3.jpg" style="background-image: url(&quot;img/videos/videos-3.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=3nQNiWdeH2Q?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Martin Garrix - Live @ Ultra Music Festival Miami 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div><div class="owl-item cloned" style="width: 292.5px;"><div class="col-lg-3">
+                                  <div class="videos__item">
+                                      <div class="videos__item__pic set-bg" data-setbg="img/videos/videos-4.jpg" style="background-image: url(&quot;img/videos/videos-4.jpg&quot;);">
+                                          <a href="https://www.youtube.com/watch?v=Srqs4CitU2U?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                                      </div>
+                                      <div class="videos__item__text">
+                                          <h5>Armin van Buuren live at Tomorrowland 2019</h5>
+                                          <ul>
+                                              <li>02:35:18</li>
+                                              <li>Dec 17, 2019</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fa fa-angle-right"></i></button></div><div class="owl-dots disabled"></div></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      </div> 
+      <!-- Grid column -->
+  
+    </div>
+    <!-- Grid row -->
+  
+    <div class="row" style="margin-top: 30px; margin-left:5px;">
+      <!--Grid column-->
+      <div class="col-md-12 mb-4">
+        <ul class="list-unstyled">
+          <!-- <app-home-tiles [loadAboutPage]="true"></app-home-tiles> -->
+        </ul>
+      </div>
+      <!--Grid column-->
+  
     </div>
   </div>
-</div>
+  <!-- News jumbotron -->
+  
+</section>
