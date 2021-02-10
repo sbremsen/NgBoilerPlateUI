@@ -3,8 +3,13 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Subscription } from 'rxjs';
 import { Board } from '../board.model';
 import { BoardService } from '../board.service';
+
+import { MDBModalService, MDBModalRef } from 'ng-uikit-pro-standard';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { BoardDialogComponent } from '../dialogs/board-dialog.component'
+
+
+import { BoardModalComponent } from 'src/app/shared/components/kanban-modals/board-modal/board-modal.component';
+import { BoardDialogComponent } from '../dialogs/board-dialog.component';
 
 @Component({
   selector: 'app-board-list',
@@ -16,7 +21,12 @@ export class BoardListComponent implements OnInit, OnDestroy {
   sub: Subscription;
   dialogRef: MatDialogRef<BoardDialogComponent>;
 
-  constructor(public boardService: BoardService, public dialog: MatDialog) {}
+  modalRef: MDBModalRef;
+  modalConfig = {
+    class: 'modal-dialog-centered'
+  };
+
+  constructor(public boardService: BoardService, public dialog: MatDialog,  private modalService: MDBModalService, ) {}
 
   ngOnInit() {
     debugger;
@@ -36,10 +46,13 @@ export class BoardListComponent implements OnInit, OnDestroy {
 
   openBoardDialog(): void {
     debugger;
-     this.dialogRef = this.dialog.open(BoardDialogComponent, {
-      width: '400px',
-      data: {  }
-    });
+
+    this.modalRef = this.modalService.show(BoardModalComponent, this.modalConfig);
+    this.modalRef.content.heading = 'Add A Task Board';
+    //  this.dialogRef = this.dialog.open(BoardDialogComponent, {
+    //   width: '400px',
+    //   data: {  }
+    // });
 
     this.dialogRef.afterClosed().subscribe(result => {
       if (result) {

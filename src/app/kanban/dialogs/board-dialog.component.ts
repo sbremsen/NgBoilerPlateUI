@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -12,11 +12,12 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
         <input matInput [(ngModel)]="data.title" />
       </mat-form-field>
     </div>
-    <div mat-dialog-actions>  
+    <div mat-dialog-actions>
+    
       <button mat-button [mat-dialog-close]="data.title" cdkFocusInitial>
         Create
       </button>
-      <button mat-button (click)="onNoClick()" style='margin-left:20px;'>Cancel</button>
+        <button mat-button (click)="onNoClick()" style='margin-left:20px;'>Cancel</button>
     </div>
   `,
   styleUrls: ['./dialog.scss']
@@ -28,7 +29,7 @@ export class BoardDialogComponent implements OnInit {
   title: string;
 
   constructor(
-    private fb: FormBuilder,
+   //  private fb: FormBuilder,
     public dialogRef: MatDialogRef<BoardDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
