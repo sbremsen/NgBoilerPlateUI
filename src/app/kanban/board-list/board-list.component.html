@@ -1,0 +1,36 @@
+<div class='row' style='height: 20px;'></div>
+<div class="white px-4 section-header">
+    <h4>Drag & Drop Kanban Board - Cloud integration with Google Firebase Cloud Platform </h4>
+    <p class="grey-text pt-2">
+        Provides Create, Read, Update, and Delete functionality, interacting with Google Firestore No-SQL DB backend.
+    </p>
+    <!-- <p class="grey-text pt-2">
+        The Kanban boards are used to track work items for a task.
+    </p> -->
+    <p class="grey-text pt-2">
+        Users can create a board, then add tasks in order of priority.  Use color-coded designations and 
+        descriptions, then re-order tasks to save them in the database in order of priority.
+    </p>
+  </div>
+  
+<div
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  class="boards"
+  (cdkDropListDropped)="drop($event)"
+>
+  <app-board cdkDrag *ngFor="let board of boards" [board]="board">
+    <mat-icon cdkDragHandle class="handle">drag_indicator</mat-icon>
+  </app-board>
+
+  <div class="board-button">
+    <button
+      mat-raised-button
+      color="accent"
+      cdkDragDisabled
+      (click)="openBoardDialog()"
+    >
+      New Board
+    </button>
+  </div>
+</div>

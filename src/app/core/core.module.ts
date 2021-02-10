@@ -34,7 +34,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MainComponent,
     HomeComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   exports: [
     HeaderComponent,

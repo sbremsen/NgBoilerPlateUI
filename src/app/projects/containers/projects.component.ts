@@ -11,7 +11,6 @@ import { ConfirmModalComponent } from '../../shared/components/confirm-modal/con
 import { ProjectModalComponent } from '../../shared/components/project-modal/project-modal.component';
 import { AngularFireAuth } from '@angular/fire/auth';
 
-
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',

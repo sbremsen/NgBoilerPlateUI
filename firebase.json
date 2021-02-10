@@ -3,7 +3,8 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "dist",
+    "public": "public",
+    "site": "remsenfireportfolio",
     "ignore": [
       "firebase.json",
       "**/.*",

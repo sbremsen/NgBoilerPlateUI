@@ -29,3 +29,16 @@
         width: calc(25% - 3rem);
     }
 }
+
+.flexbox {
+    display: flex;
+  
+    // Ensure content elements fill up the .column
+    .element {
+      height: 100%;
+    }
+  }
+
+  .imgHeight  {
+    height: -webkit-fill-available!important;
+}

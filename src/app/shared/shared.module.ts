@@ -10,19 +10,23 @@ import {
 } from 'ng-uikit-pro-standard';
 import { CustomersModalComponent } from './components/customers-modal/customers-modal.component';
 import { ProjectModalComponent } from './components/project-modal/project-modal.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './components/project/project.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { CustomersListComponent } from './components/customers-list/customers-list.component';
+import { BoardModalComponent } from './components/kanban-modals/board-modal/board-modal.component';
+import { TaskModalComponent } from './components/kanban-modals/task-modal/task-modal.component';
 
 @NgModule({
   declarations: [
     ConfirmModalComponent,
+    BoardModalComponent,
+    TaskModalComponent,
     CustomersModalComponent,
     ProjectModalComponent,
     ProjectsListComponent,
     ProjectComponent,
-    CustomersListComponent
+    CustomersListComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +34,7 @@ import { CustomersListComponent } from './components/customers-list/customers-li
     InputUtilitiesModule,
     IconsModule,
     FormsModule,
+    ReactiveFormsModule,
     ButtonsModule,
     CardsModule,
   ],
@@ -38,7 +43,8 @@ import { CustomersListComponent } from './components/customers-list/customers-li
   entryComponents: [
     ConfirmModalComponent,
     CustomersModalComponent,
-    ProjectModalComponent
+    ProjectModalComponent,
+    BoardModalComponent
   ]
 })
 export class SharedModule {}
