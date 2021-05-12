@@ -32,7 +32,7 @@
     "@types/chart.js": "^2.7.56",
     "@types/md5": "^2.1.33",
     "animate.css": "^3.7.2",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "core-js": "^3.1.4",
     "express": "^4.17.1",
     "firebase": "^6.3.4",
